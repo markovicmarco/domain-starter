@@ -65,7 +65,7 @@ header{
   background-color: #a200d6;
 }
 
-.cta-button {
+.cta-button { 
   height: 45px;
   border: 0;
   width: auto;
@@ -92,29 +92,29 @@ header{
 .connect-wallet-button {
   background-image: linear-gradient(
     to right,
-    #ff8177 0%,
+    #27465E 0%,
     #ff867a 0%,
     #ff8c7f 21%,
     #f99185 52%,
     #cf556c 78%,
-    #b12a5b 100%
+    #27465E 100%
   );
   background-size: 200% 200%;
   animation: gradient-animation 4s ease infinite;
 }
 
 .mint-button {
-  background: -webkit-linear-gradient(left, #a200d6, #ff6fdf);
+  background: -webkit-linear-gradient(left, #27465E, #ff9fdf);
   font-size: 18px;
   background-size: 200% 200%;
   animation: gradient-animation 4s ease infinite;
   margin: 20px 10px;
-  border-radius: 20px;
+  border-radius: 0px;
   padding: 0px 2rem;
 }
 
 .mint-button:disabled{
-  background: #550072;
+  background: #27465E;
   color: rgb(209, 209, 209);
   cursor: not-allowed;
 }

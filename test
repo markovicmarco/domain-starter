@@ -13,7 +13,7 @@ const TWITTER_HANDLE = '_buildspace';
 const TWITTER_LINK = `https://twitter.com/${TWITTER_HANDLE}`;
 // Add the domain you will be minting
 const tld = '.ninja';
-const CONTRACT_ADDRESS = '0xff009eFDBAf4D55100077C741c7b307062cf30f4';
+const CONTRACT_ADDRESS = '0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266';
 
 const App = () => {
 	const [network, setNetwork] = useState('');
@@ -165,7 +165,7 @@ const App = () => {
 		  }
 	  }
 
-	  const fetchMints = async () => {
+	const fetchMints = async () => {
 		try {
 		  const { ethereum } = window;
 		  if (ethereum) {
@@ -204,7 +204,7 @@ const App = () => {
 		}
 	  }, [currentAccount, network]);
 
-	  const updateDomain = async () => {
+	const updateDomain = async () => {
 		if (!record || !domain) { return }
 		setLoading(true);
 		console.log("Updating domain", domain, "with record", record);
@@ -230,7 +230,7 @@ const App = () => {
 	  }
 
 	// Render methods
-    const renderNotConnectedContainer = () => (
+	const renderNotConnectedContainer = () => (
 		<div className="connect-wallet-container">
 			<img src="https://media.giphy.com/media/3ohhwytHcusSCXXOUg/giphy.gif" alt="Ninja donut gif" />
       {/* Call the connectWallet function we just wrote when the button is clicked */}
@@ -277,9 +277,9 @@ const renderMints = () => {
 	setEditing(true);
 	setDomain(name);
   }
-
 	
 	// Form to enter domain name and data
+	// Here's the updated renderInputForm function (do not make a new one)
 	const renderInputForm = () =>{
 		if (network !== 'Polygon Mumbai Testnet') {
 		  return (
@@ -335,7 +335,6 @@ const renderMints = () => {
 		checkIfWalletIsConnected();
 	}, []);
 
-
 	return (
 		<div className="App">
 			<div className="container">
@@ -356,7 +355,7 @@ const renderMints = () => {
 				{!currentAccount && renderNotConnectedContainer()}
 				{/* Render the input form if an account is connected */}
 				{currentAccount && renderInputForm()}
-				{mints && renderMints()}
+        {mints && renderMints()}
 				
 				<div className="footer-container">
 					<img alt="Twitter Logo" className="twitter-logo" src={twitterLogo} />
