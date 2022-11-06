@@ -4,6 +4,9 @@ import ethLogo from "./assets/ethlogo.png";
 import { networks } from "./utils/networks";
 import contractAbi from "./utils/contractABI.json";
 import React, { useEffect, useState } from "react";
+import polygonLogo from "./assets/polygonlogo.png";
+
+const tld = ".izzzy";
 const CONTRACT_ADDRESS = '0x2d6a782101b58E4Ac79531Bb8af592Ad8403f7a7';
 
 const App = () => {
