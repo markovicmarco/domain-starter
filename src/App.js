@@ -4,9 +4,26 @@ import ethLogo from "./assets/ethlogo.png";
 import { networks } from "./utils/networks";
 import contractAbi from "./utils/contractABI.json";
 import React, { useEffect, useState } from "react";
+<<<<<<< HEAD
 import polygonLogo from "./assets/polygonlogo.png";
 
 const tld = ".izzzy";
+=======
+import './styles/App.css';
+import twitterLogo from './assets/twitter-logo.svg';
+import polygonLogo from './assets/polygonlogo.png';
+import ethLogo from './assets/ethlogo.png';
+import { networks } from './utils/networks';
+import {ethers} from "ethers";
+import contractAbi from './utils/contractABI.json';
+
+
+// Constants
+const TWITTER_HANDLE = '_buildspace';
+const TWITTER_LINK = `https://twitter.com/${TWITTER_HANDLE}`;
+// Add the domain you will be minting
+const tld = '.ninja';
+>>>>>>> 7e495b9994ef2f770c0817e401405a84835eac6e
 const CONTRACT_ADDRESS = '0x2d6a782101b58E4Ac79531Bb8af592Ad8403f7a7';
 
 const App = () => {
